@@ -5,6 +5,11 @@ let obj = {
 };
 function removeNumberValues(obj) {
     // your code here
+    Object.keys(obj).forEach(function(key) {
+        if (typeof obj[key] === 'number') {
+          delete obj[key];
+        }
+      });
     
 }
 

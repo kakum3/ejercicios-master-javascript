@@ -1,5 +1,7 @@
-function isPersonOldEnoughToDrinkAndDrive(person) {
-  // the person object contains an "age" property inside
-  // Add your code after this line
-  
+function isPersonOldEnoughToDrinkAndDrive(person,age) {
+  if(person.age >= 21){
+    return true
+  }
+
+  return false
 }

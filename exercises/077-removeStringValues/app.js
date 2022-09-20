@@ -5,6 +5,11 @@ let obj = {
 
 function removeStringValues(obj) {
     // your code here
+    Object.keys(obj).forEach(function(key) {
+        if (typeof obj[key] === 'string') {
+          delete obj[key];
+        }
+      });
     
 }
 

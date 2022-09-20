@@ -4,7 +4,17 @@ let obj = {
 
 function getSquaredElementsAtProperty(obj, key) {
     // your code here
+    var arr = [];
+    if (typeof obj[key] === "undefined"){
+      arr = [];
+      return arr
+    }
+    for (i=0; i<obj[key].length; i++){
+      arr.push(obj[key][i]**2);
+    }
+  return arr
 }
+
 
 let output = getSquaredElementsAtProperty(obj, 'key');
 console.log(output); // --> [4, 1, 25]

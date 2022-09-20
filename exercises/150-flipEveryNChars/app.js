@@ -1,6 +1,20 @@
 function flipEveryNChars(input, n) {
     // your code here
-}
+    nA = [];
+    len = input.length;
+    separarCadena = input.split("");
+    for (var i = 0; i < len/n; i++){
+        if (i==0){
+          nA[i] = separarCadena.slice(0,n).reverse().join("");
+        }
+        else {
+          nA[i] = separarCadena.slice(i*n,(i+1)*n).reverse().join("");
+        }
+      }
+      unirArr = nA.join("");
+      return unirArr
+    }
+
 
 let input = 'a short example';
 let output = flipEveryNChars(input, 5);
